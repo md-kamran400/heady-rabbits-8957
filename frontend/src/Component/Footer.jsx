@@ -4,11 +4,12 @@ import "./Footer.css"
 export default function Footer() {
   return (
     <div>
-        <div className="footerSection">
-          
+      <div className="footerSection">
 
-          <div className='footerdiv'>
+
+        <div className='footerdiv'>
           <div>logo</div>
+
 
             <div>
               <ul>
@@ -44,10 +45,20 @@ export default function Footer() {
 
             </div>
 
+          <div>
+            zdvdz
+
+
+
           </div>
-          
+          <div>gfsg</div>
+          <div>gfsg</div>
+          <div>gfsg</div>
 
         </div>
+
+
+      </div>
 
 
 
