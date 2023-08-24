@@ -7,7 +7,27 @@
 
 .footerdiv {
     width: 96%;
+
+    padding: 40px 20px;
+ display: grid;
+grid-template-columns: repeat(5,1fr);
+/* background-color: rgb(17, 16, 16); */
+background: rgb(1,13,23);
+background: linear-gradient(0deg, rgba(1,13,23,1) 0%, rgba(1,1,4,1) 0%, rgba(0,0,0,1) 0%, rgba(52,56,56,1) 100%);
+}
+
+.footerdiv div ul{
+   list-style-type: none;
+   text-align: left;
+}
+
+.footerdiv div ul li {
+    font-weight: 600;
+    color: #dbdbdb;
+    padding: 10px 0;
+
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     background-color: rgb(17, 16, 16);
+
 }
