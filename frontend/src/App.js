@@ -14,10 +14,13 @@ function App() {
 
 
 <Sidebar/>
+
+
+
 <Footer/>
 
 
- 
+    
     </div>
   );
 }

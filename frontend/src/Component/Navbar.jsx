@@ -65,17 +65,17 @@ export default function Navbar() {
             <Box>Logo</Box>
             <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
              
-                <NavLink >
-                  <Link to="/"> Home</Link>
+                <NavLink to="/">
+                  Home
                 </NavLink>
 
                 <NavLink >
-                    <Link to="/"> Shop</Link>
+                    Shop
                 </NavLink>
 
       <div className="searchDiv">
 
-      <input type="text" name="" id="" placeholder='search' />
+      <input type="text" name="" id="" placeholder='search' bg={useColorModeValue('gray.100', 'blackAlpha.800')}/>
       <AiOutlineSearch className='searchIcon'/>
       </div>
             

@@ -10,9 +10,10 @@ export default function AllProducts() {
   const error = useSelector((store) => store.singleData.isError);
 
   useEffect(() => {
-    dispatch(getAllProducts);
+    dispatch(getAllProducts());
   }, []);
 
+ 
   return (
     <div>
       <div style={{ display: "grid",   gridTemplateColumns: "repeat(3, 1fr)", marginTop: "20px",paddingBottom: "40px"}}>
