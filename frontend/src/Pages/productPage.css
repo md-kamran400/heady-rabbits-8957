@@ -1,0 +1,46 @@
+/* ProductsPageDetail.css */
+
+.card {
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin: 16px;
+  }
+  
+  .image-container {
+    margin: auto;
+    width: 400px;
+  }
+  
+  .image {
+    max-width: 100%;
+    height: 300px;
+  }
+  
+  .rating {
+    color: green;
+  }
+  
+  .date {
+    color: blue;
+  }
+  
+  .comments {
+    color: darkorange;
+  }
+  
+  .category {
+    color: purple;
+  }
+  
+  .price {
+    color: teal;
+  }
+  
+  .title {
+    font-weight: bold;
+  }
+  
+  .publisher {
+    color: gray;
+  }
+  
