@@ -1,13 +1,13 @@
-.footerSection{
+.footerSection {
     width: 100%;
     display: flex;
-       flex-direction: row-reverse;
-   
+    flex-direction: row-reverse;
+
 }
 
-.footerdiv{
+.footerdiv {
     width: 96%;
- display: grid;
-grid-template-columns: repeat(5,1fr);
-background-color: rgb(17, 16, 16);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    background-color: rgb(17, 16, 16);
 }
