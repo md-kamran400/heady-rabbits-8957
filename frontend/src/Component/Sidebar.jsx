@@ -15,19 +15,13 @@ export default function Sidebar() {
 
 
 
-
-
-
-
-
-
 <SideNav
     onSelect={(selected) => {
         // Add your code here
     }}
 >
-    <SideNav.Toggle />
-    <SideNav.Nav defaultSelected="home">
+    <SideNav.Toggle style={{backgroundColor: "#131314"}} />
+    <SideNav.Nav defaultSelected="home" style={{backgroundColor: "#06070d",height: "100vh"}}>
         <NavItem eventKey="home">
             <NavIcon>
                <AiFillHome style={{ fontSize: '1.75em' }}/>
