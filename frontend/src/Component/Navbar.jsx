@@ -17,10 +17,12 @@ import {
   useColorModeValue,
   Stack,
   useColorMode,
+  
 } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon, AddIcon,MoonIcon, SunIcon } from '@chakra-ui/icons'
-
-
+import "./Navbar.css"
+import { Link } from 'react-router-dom'
+import { AiOutlineSearch } from 'react-icons/ai'
 
 
 
@@ -49,7 +51,8 @@ export default function Navbar() {
 
   return (
     <>
-      <Box bg={useColorModeValue('gray.100', 'blackAlpha.800')} px={4}>
+    <div className='navdiv'>
+  <Box bg={useColorModeValue('gray.100', 'blackAlpha.800')} px={4} className='navP'>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
             size={'md'}
@@ -62,8 +65,22 @@ export default function Navbar() {
             <Box>Logo</Box>
             <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
              
-                <NavLink >Home</NavLink>
-                <NavLink >Home</NavLink>
+                <NavLink >
+                  <Link to="/"> Home</Link>
+                </NavLink>
+
+                <NavLink >
+                    <Link to="/"> Shop</Link>
+                </NavLink>
+
+      <div className="searchDiv">
+
+      <input type="text" name="" id="" placeholder='search' />
+      <AiOutlineSearch className='searchIcon'/>
+      </div>
+            
+
+
             </HStack>
           </HStack>
           <Flex alignItems={'center'}>
@@ -120,7 +137,10 @@ export default function Navbar() {
         ) : null}
       </Box>
 
-      <Box p={4}>Main Content Here</Box>
+    </div>
+    
+
+    
     </>
   )
 }
