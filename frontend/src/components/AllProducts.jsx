@@ -10,7 +10,7 @@ export default function AllProducts() {
   const error = useSelector((store) => store.singleData.isError);
 
   useEffect(() => {
-    dispatch(getAllProducts());
+    dispatch(getAllProducts);
   }, []);
 
   return (
