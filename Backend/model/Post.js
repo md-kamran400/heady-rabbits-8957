@@ -3,13 +3,14 @@ const mongoose=require("mongoose")
 
 
 const newschema=mongoose.Schema({
-    title: String,
-    date :String,
+title: String,
+date :String,
 rating : String,
-no_of_comments : Number,
+comments : Number,
 price:Number,
 image:String,
-publisher:String
+publisher:String,
+category:String
 },
 {
     versionKey:false

@@ -1,6 +1,5 @@
 
 const express=require("express")
-const bcrypt=require("bcrypt")
 const jwt=require("jsonwebtoken")
 const { auth } = require("../middleware/auth")
 const postroute=express.Router()
@@ -14,7 +13,7 @@ postroute.post("/add",auth,async(req,res)=>{
        
 try {
      
-       const newpost= new Post({...req.body,useremail:email}) 
+       const newpost= new Post(req.body) 
        await newpost.save()
         res.status(200).send("Post added successfully")
      
@@ -26,17 +25,11 @@ try {
 })
 
 postroute.get("/",async(req,res)=>{
-    const token= req.headers.authorization?.split(" ")[1]
-    const decoder=jwt.verify(token,"masai")
-       const email=decoder.payload
-       const posts=await Post.find({useremail:email})
+     const posts=await Post.find() 
+     const totaldata=posts.length
 try {
-     if(posts){
-        res.status(200).send(posts)
-     }
-     else{
-        res.status(201).send("you dont have post please add")
-     }
+    
+        res.status(200).send({posts,totaldata})
     
 } catch (error) {
     console.log(error)
