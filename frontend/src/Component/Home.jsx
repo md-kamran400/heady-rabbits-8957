@@ -5,19 +5,25 @@ import { getAllProducts } from "../Redux/Products/action";
 import { AiOutlineStar } from "react-icons/ai";
 import { RiFolderUserFill } from "react-icons/ri";
 
-import {Box, useColorModeValue} from '@chakra-ui/react'
+import {Box, Flex, HStack, Skeleton, useColorModeValue} from '@chakra-ui/react'
 
 
 export default function Home() {
 
 const dispatch=useDispatch()
 const post=useSelector((store)=>store.singleData.Alldata)
+const isloading=useSelector((store)=>store.singleData.isLoading)
 
     useEffect(() => {
         dispatch(getAllProducts());
       }, []);
     
 //  console.log(post);
+
+
+// if(isloading){
+//   return <h1>Loading..........</h1>
+// }
 
   return (
     <div>
@@ -33,6 +39,21 @@ const post=useSelector((store)=>store.singleData.Alldata)
 
 
                 {
+
+                  isloading?
+
+                    <div  style={{width:"100%",display:"grid",gridTemplateColumns:"repeat(4,1fr)"}}>
+                  <Skeleton height='200px' />
+                  <Skeleton height='200px' />
+                  <Skeleton height='200px' />
+                  <Skeleton height='200px' />
+                  <Skeleton height='200px' />
+                  <Skeleton height='200px' />
+                    </div>   
+
+
+
+                 :
                     post && post.map((el)=>(
                        <div key={el._id}>
 
