@@ -45,15 +45,7 @@ export default function Footer() {
 
             </div>
 
-          <div>
-            zdvdz
-
-
-
-          </div>
-          <div>gfsg</div>
-          <div>gfsg</div>
-          <div>gfsg</div>
+   
 
         </div>
 
