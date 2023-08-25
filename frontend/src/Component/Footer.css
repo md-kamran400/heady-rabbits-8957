@@ -28,6 +28,6 @@ background: linear-gradient(0deg, rgba(1,13,23,1) 0%, rgba(1,1,4,1) 0%, rgba(0,0
 
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    background-color: rgb(17, 16, 16);
+    
 
 }
