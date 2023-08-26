@@ -13,6 +13,8 @@ function App() {
  <Allroutes/>  
 <Sidebar/>
 <Footer/>
+
+
 </div>
   );
 }

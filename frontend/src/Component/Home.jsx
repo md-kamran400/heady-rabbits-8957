@@ -1,31 +1,35 @@
 import React, { useEffect, useState } from "react";
 import "./Home.css"
 import { useDispatch, useSelector } from "react-redux";
-import { getAllProducts } from "../Redux/Products/action";
+
 import { AiOutlineStar } from "react-icons/ai";
 import { RiFolderUserFill } from "react-icons/ri";
 
 import {Box, Button, Flex, HStack, Heading, Skeleton, useColorModeValue} from '@chakra-ui/react'
 import Post from "./Post";
+import { getAllProducts } from "../Redux/Products/action";
 
 
 export default function Home() {
 const [page,setPage]=useState(1)
 const dispatch=useDispatch()
-const post=useSelector((store)=>store.singleData.Alldata)
+const post=useSelector((store) => store.singleData.Alldata);
 const isloading=useSelector((store)=>store.singleData.isLoading)
 const totalData=useSelector((store)=>store.singleData.Totaldata)
 
 const totalPage=Math.ceil(totalData/9)
+
     useEffect(() => {
         dispatch(getAllProducts(page));
       }, [page]);
     
+
+      
 const handlePageChange=(value)=>{
   setPage(prev=>prev+value)
 }
 
-// console.log(totalPage);
+console.log(post);
   return (
     <div>
 
@@ -51,6 +55,9 @@ const handlePageChange=(value)=>{
                           <Post key={el._id} {...el}/>
                       ))
                 }
+
+
+                
  
       </div>
 
