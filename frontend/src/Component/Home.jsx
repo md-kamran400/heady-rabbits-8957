@@ -5,7 +5,7 @@ import { getAllProducts } from "../Redux/Products/action";
 import { AiOutlineStar } from "react-icons/ai";
 import { RiFolderUserFill } from "react-icons/ri";
 
-import {Box, Button, Flex, HStack, Skeleton, useColorModeValue} from '@chakra-ui/react'
+import {Box, Button, Flex, HStack, Heading, Skeleton, useColorModeValue} from '@chakra-ui/react'
 import Post from "./Post";
 
 
@@ -55,17 +55,21 @@ const handlePageChange=(value)=>{
       </div>
 
 
-
+     
             <div className="paginationDiv">
+         
                 <Button colorScheme='teal' size='sm' onClick={()=>handlePageChange(-1)} isDisabled={page==1}>
                 Previous
               </Button>
-                  {page}
+                <Heading as='h5' size='sm'>
+                {page}
+              </Heading> 
               <Button colorScheme='teal' size='sm' onClick={()=>handlePageChange(1)} isDisabled={page==totalPage}>
                 Next
               </Button>
+            
             </div>
-
+         
 
         </div>
 
