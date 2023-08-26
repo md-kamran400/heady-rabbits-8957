@@ -1,0 +1,81 @@
+
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9earl4PrI2V4hlRMTvWw5F5NDyHWiuL_fwiilZNfnDg&s");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .img-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .header-text {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .signup-form {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-heading {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .input-label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .submit-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .error-text {
+    color: #ff0000;
+    margin-top: 10px;
+  }
+  
+  .success-text {
+    color: #00cc00;
+    margin-top: 10px;
+  }

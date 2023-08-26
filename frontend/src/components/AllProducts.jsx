@@ -14,6 +14,7 @@ export default function AllProducts() {
     dispatch(getAllProducts());
   }, []);
 
+ 
   return (
     <div>
       <ProductBanner/>

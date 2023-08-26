@@ -19,7 +19,7 @@ display: flex;
 }
 .searchDiv input{
     padding: 5px 5px 5px 30px;
-    background-color: black;
+  
     border: 1px solid #3c3c3c;
     color: rgb(195, 194, 194);
 }
