@@ -23,3 +23,4 @@ export const ProductsPageDetail = ({item}) => {
   </div>
   );
 };
+
