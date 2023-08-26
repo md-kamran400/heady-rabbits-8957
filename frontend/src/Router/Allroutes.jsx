@@ -10,6 +10,7 @@ export default function Allroutes() {
     <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path='/Checkout' element={<Checkout/>}></Route>
+       
     </Routes>
 
     </div>

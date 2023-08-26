@@ -11,17 +11,9 @@ function App() {
     <div className="App">
    <Navbar/>
  <Allroutes/>  
-
-
 <Sidebar/>
-
-
-
 <Footer/>
-
-
-    
-    </div>
+</div>
   );
 }
 
