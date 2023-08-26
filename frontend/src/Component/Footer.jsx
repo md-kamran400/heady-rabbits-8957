@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+import React from "react";
+import "./Footer.css";
+=======
+<<<<<<< HEAD
 // import React from 'react'
 
 // export default function Footer() {
@@ -9,11 +13,22 @@
 =======
 import React from 'react'
 import "./Footer.css"
+>>>>>>> main
 
 export default function Footer() {
   return (
     <div>
       <div className="footerSection">
+<<<<<<< HEAD
+        <div className="footerdiv">
+          <div>logo</div>
+          <div>zdvdz</div>
+          <div>gfsg</div>
+          <div>gfsg</div>
+          <div>gfsg</div>
+        </div>
+      </div>
+=======
 
 
         <div className='footerdiv'>
@@ -63,7 +78,8 @@ export default function Footer() {
 
 
 
+>>>>>>> main
     </div>
-  )
+  );
 }
 >>>>>>> 66796c06e16bc13214d2c26f6835d24d982e388b

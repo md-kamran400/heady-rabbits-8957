@@ -1,14 +1,17 @@
 /* ProductsPageDetail.css */
 
 .card {
-    border: 1px solid #ccc;
+    border: 1px solid #756f6f;
+    border-radius: 10px ;
+    height: 400px;
     padding: 16px;
     margin: 16px;
+    background-color: rgb(242, 236, 236);
   }
   
   .image-container {
     margin: auto;
-    width: 400px;
+    width: 100%;
   }
   
   .image {
@@ -33,7 +36,8 @@
   }
   
   .price {
-    color: teal;
+    color: rgb(6, 118, 78);
+   
   }
   
   .title {
@@ -43,4 +47,107 @@
   .publisher {
     color: gray;
   }
+
+  .banner{
+    background-image: url("https://cemhri.org/wp-content/uploads/2018/04/Home-Four-Banner-Background-Image.png");
+  }
   
+  .banner-inp{
+    width: 500px;
+    height: 40px;
+    position: absolute;
+    left: 220px;
+    top: 330px;
+    
+  }
+  .banner-h1{
+    font-size: 50px;
+    font-weight: 900;
+    font-family: sans-serif;
+    position: absolute;
+    left: 220px;
+    color: rgb(19, 222, 168);
+    top: 100px;
+  }
+  
+  .banner-h2 {
+    left: 220px;
+    font-size: 50px;
+    font-weight: 900;
+    font-family: sans-serif;
+    position: absolute;
+    color: rgb(19, 222, 168);
+    top: 180px;
+  }
+
+  .search-btn{
+    width: 100px;
+    height: 45px;
+    left: 727px;
+    position: absolute;
+    top: 330px;
+    background-color: #1DE9B6;
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: 700;
+    border: none;
+  }
+
+  .div_Name {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 40px;
+    top: 400px;
+    left: 220px;
+  }
+
+  .div_Name > div {
+    flex: 1;
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    margin: 0 5px;
+    color: white;
+  }
+
+  .content{
+    padding: 10px;
+    display: flex;
+    width: 100%;
+  }
+
+  .info{
+    margin-left: 30px;
+    width: 100%;
+    height: 100px;
+    line-height: 15px;
+    margin-top: -10px;
+    text-align: left;
+
+  }
+
+  .info1{
+    margin-left: 100px;
+    width: 100%;
+    line-height: 20px;
+    margin-top: -20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+  }
+
+  .publisher{
+    font-weight: 700;
+    margin: 0;
+  font-size: 16px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  }

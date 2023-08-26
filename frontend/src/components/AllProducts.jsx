@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { ProductsPageDetail } from "../Pages/ProductsPageDetail";
 import { getAllProducts } from "../Redux/Products/action";
+import ProductBanner from "../Pages/ProductBanner";
 
 export default function AllProducts() {
   const dispatch = useDispatch();
@@ -16,6 +17,7 @@ export default function AllProducts() {
  
   return (
     <div>
+      <ProductBanner/>
       <div style={{ display: "grid",   gridTemplateColumns: "repeat(3, 1fr)", marginTop: "20px",paddingBottom: "40px"}}>
         {data.map((item) => (
           <div key={item.id} >
