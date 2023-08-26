@@ -18,13 +18,16 @@
     padding: 40px 20px;
  display: grid;
  align-self: flex-end;
-grid-template-columns: repeat(4,1fr);
+grid-template-columns: repeat(3,1fr);
 
 
 /* column-count: 3; */
 gap: 10px;
 }
-
+.paginationDiv{
+  width: 96%;
+  padding: 40px 20px;
+}
 
 .homediv img{
     width: 100%;

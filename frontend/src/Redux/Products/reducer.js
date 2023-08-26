@@ -4,6 +4,7 @@ const initialState = {
   isLoading: false,
   Alldata: [], 
   isError: false,
+  Totaldata:0
 };
 
 export const reducer = (state = initialState, { type, payload }) => {
@@ -20,7 +21,8 @@ export const reducer = (state = initialState, { type, payload }) => {
         ...state,
         isLoading: false,
         isError: false,
-        Alldata: payload,
+        Alldata: payload.post,
+        Totaldata:payload.total
       };
     }
     case DATA_ERROR: {
