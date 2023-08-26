@@ -1,0 +1,35 @@
+.navdiv{
+    width: 100%;
+display: flex;
+   flex-direction: row-reverse;
+
+}
+.navP{
+    width: 96%;
+}
+.searchDiv{
+    position: relative;
+    
+}
+.searchIcon{
+    position: absolute;
+    top: 50%;
+    left: 10px; 
+    transform: translateY(-50%);
+}
+.searchDiv input{
+    padding: 5px 5px 5px 30px;
+  
+    border: 1px solid #3c3c3c;
+    color: rgb(195, 194, 194);
+}
+
+.searchDiv input:focus-visible{
+   
+    border: 1px solid #067439 !important;
+}
+
+.searchDiv input:focus{
+   
+    border: 1px solid #067439 !important;
+}

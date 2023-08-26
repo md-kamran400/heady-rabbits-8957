@@ -1,5 +1,6 @@
 // import React from 'react'
 
+<<<<<<< HEAD
 // import {
 //   Box,
 //   Flex,
@@ -21,6 +22,31 @@
 // import { HamburgerIcon, CloseIcon, AddIcon,MoonIcon, SunIcon } from '@chakra-ui/icons'
 
 
+=======
+import {
+  Box,
+  Flex,
+  Avatar,
+  HStack,
+  Text,
+  IconButton,
+  Button,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuDivider,
+  useDisclosure,
+  useColorModeValue,
+  Stack,
+  useColorMode,
+  
+} from '@chakra-ui/react'
+import { HamburgerIcon, CloseIcon, AddIcon,MoonIcon, SunIcon } from '@chakra-ui/icons'
+import "./Navbar.css"
+import { Link } from 'react-router-dom'
+import { AiOutlineSearch } from 'react-icons/ai'
+>>>>>>> 66796c06e16bc13214d2c26f6835d24d982e388b
 
 
 
@@ -47,6 +73,7 @@
 //   const { colorMode, toggleColorMode } = useColorMode()
 
 
+<<<<<<< HEAD
 //   return (
 //     <>
 //       <Box bg={useColorModeValue('gray.100', 'blackAlpha.800')} px={4}>
@@ -67,6 +94,43 @@
 //             </HStack>
 //           </HStack>
 //           <Flex alignItems={'center'}>
+=======
+  return (
+    <>
+    <div className='navdiv'>
+  <Box bg={useColorModeValue('gray.100', 'blackAlpha.800')} px={4} className='navP'>
+        <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
+          <IconButton
+            size={'md'}
+            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+            aria-label={'Open Menu'}
+            display={{ md: 'none' }}
+            onClick={isOpen ? onClose : onOpen}
+          />
+          <HStack spacing={8} alignItems={'center'}>
+            <Box>Logo</Box>
+            <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
+             
+                <NavLink to="/">
+                  Home
+                </NavLink>
+
+                <NavLink >
+                    Shop
+                </NavLink>
+
+      <div className="searchDiv">
+
+      <input type="text" name="" id="" placeholder='search' bg={useColorModeValue('gray.100', 'blackAlpha.800')}/>
+      <AiOutlineSearch className='searchIcon'/>
+      </div>
+            
+
+
+            </HStack>
+          </HStack>
+          <Flex alignItems={'center'}>
+>>>>>>> 66796c06e16bc13214d2c26f6835d24d982e388b
            
 
 //           <Button onClick={toggleColorMode}>
@@ -120,10 +184,20 @@
 //         ) : null}
 //       </Box>
 
+<<<<<<< HEAD
 //       <Box p={4}>Main Content Here</Box>
 //     </>
 //   )
 // }
+=======
+    </div>
+    
+
+    
+    </>
+  )
+}
+>>>>>>> 66796c06e16bc13214d2c26f6835d24d982e388b
 
 
 

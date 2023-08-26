@@ -1,0 +1,75 @@
+import React, { useEffect, useState } from "react";
+import "./Home.css"
+import { useDispatch, useSelector } from "react-redux";
+import { getAllProducts } from "../Redux/Products/action";
+import { AiOutlineStar } from "react-icons/ai";
+import { RiFolderUserFill } from "react-icons/ri";
+
+import {Box, Button, Flex, HStack, Skeleton, useColorModeValue} from '@chakra-ui/react'
+import Post from "./Post";
+
+
+export default function Home() {
+const [page,setPage]=useState(1)
+const dispatch=useDispatch()
+const post=useSelector((store)=>store.singleData.Alldata)
+const isloading=useSelector((store)=>store.singleData.isLoading)
+const totalData=useSelector((store)=>store.singleData.Totaldata)
+
+const totalPage=Math.ceil(totalData/9)
+    useEffect(() => {
+        dispatch(getAllProducts(page));
+      }, [page]);
+    
+const handlePageChange=(value)=>{
+  setPage(prev=>prev+value)
+}
+
+// console.log(totalPage);
+  return (
+    <div>
+
+      <div className="homeSection">
+
+      <Box className="heading" bg={useColorModeValue('blackAlpha.100', 'blackAlpha.500')}>
+           Home
+      </Box>
+         
+            <div className='homediv'>
+
+                  {
+
+                  isloading ?
+                      post &&  post.map((el)=>(
+                            <Skeleton height='200px' />
+                         ))
+
+                 
+                        :
+                    post && post.map((el)=>(
+
+                          <Post key={el._id} {...el}/>
+                      ))
+                }
+ 
+      </div>
+
+
+
+            <div className="paginationDiv">
+                <Button colorScheme='teal' size='sm' onClick={()=>handlePageChange(-1)} isDisabled={page==1}>
+                Previous
+              </Button>
+                  {page}
+              <Button colorScheme='teal' size='sm' onClick={()=>handlePageChange(1)} isDisabled={page==totalPage}>
+                Next
+              </Button>
+            </div>
+
+
+        </div>
+
+
+  </div>
+  )
+}

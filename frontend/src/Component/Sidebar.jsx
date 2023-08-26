@@ -15,6 +15,7 @@
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -36,6 +37,23 @@
 //                 Home
 //             </NavText>
 //         </NavItem>
+=======
+<SideNav
+    onSelect={(selected) => {
+        // Add your code here
+    }}
+>
+    <SideNav.Toggle style={{backgroundColor: "#131314"}} />
+    <SideNav.Nav defaultSelected="home" style={{backgroundColor: "#06070d",height: "100vh"}}>
+        <NavItem eventKey="home">
+            <NavIcon>
+               <AiFillHome style={{ fontSize: '1.75em' }}/>
+            </NavIcon>
+            <NavText>
+                Home
+            </NavText>
+        </NavItem>
+>>>>>>> 66796c06e16bc13214d2c26f6835d24d982e388b
    
 
 //         <NavItem eventKey="home">

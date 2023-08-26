@@ -13,11 +13,18 @@
     "@testing-library/user-event": "^13.5.0",
     "@trendmicro/react-sidenav": "^0.5.0",
     "axios": "^1.4.0",
+<<<<<<< HEAD
     "framer-motion": "^10.16.1",
+=======
+>>>>>>> 66796c06e16bc13214d2c26f6835d24d982e388b
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.10.1",
+    "react-redux": "^8.1.2",
+    "react-router-dom": "^6.15.0",
     "react-scripts": "5.0.1",
+    "redux": "^4.2.1",
+    "redux-thunk": "^2.4.2",
+    "thunk": "^0.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
