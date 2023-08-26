@@ -5,11 +5,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ChakraProvider, ColorModeScript } from '@chakra-ui/react';
 import theme from '../src/Component/Theme'
+// import { Provider } from "react-redux";
+// import { store } from "./Redux/store";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <ChakraProvider theme={theme}>
-      <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+     {/* <Provider store={store}> */}
+      {/* <ColorModeScript initialColorMode={theme.config.initialColorMode} /> */}
     <App />
+    {/* </Provider> */}
  
     </ChakraProvider>
 );
