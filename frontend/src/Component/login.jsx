@@ -1,8 +1,7 @@
 
-
-
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 // import { Link } from "react-router-dom";
 // import Signup from "./signup";
 
@@ -14,6 +13,8 @@ const Login = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const [authToken, setAuthToken] = useState(null);
+  const navigate = useNavigate();
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,6 +30,8 @@ const Login = () => {
       const authToken = response.data.token;
       setAuthToken(authToken);
       setError("");
+      // navigate("/"); 
+      // console.log(authToken);
     } catch (error) {
       setError("Invalid email or password.");
     }

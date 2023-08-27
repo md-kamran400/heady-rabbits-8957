@@ -38,6 +38,8 @@ console.log(post);
       <Box className="heading" bg={useColorModeValue('blackAlpha.100', 'blackAlpha.500')}>
            Home
       </Box>
+
+
          
             <div className='homediv'>
 

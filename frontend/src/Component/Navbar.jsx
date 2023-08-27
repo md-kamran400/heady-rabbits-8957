@@ -17,12 +17,16 @@ import {
   useColorModeValue,
   Stack,
   useColorMode,
+  useToast,
   
 } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon, AddIcon,MoonIcon, SunIcon } from '@chakra-ui/icons'
 import "./Navbar.css"
 import { Link } from 'react-router-dom'
 import { AiOutlineSearch } from 'react-icons/ai'
+import { useDispatch, useSelector } from 'react-redux'
+import axios from 'axios'
+import { LogoutAction } from '../Redux/Login/action'
 
 
 
@@ -47,8 +51,23 @@ const NavLink = (props) => {
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const { colorMode, toggleColorMode } = useColorMode()
+  const isAuth=useSelector((store)=>store.Loginreducer.isAuth)
 
+  const dispatch=useDispatch()
+  const toast = useToast()
 
+  const handleLogout = () => {
+    dispatch(LogoutAction());
+    toast({
+      title: 'You have been successfully logged out',
+    
+      status: 'success',
+      duration: 3000,
+      isClosable: true,
+    })
+  };
+
+  console.log(isAuth);
   return (
     <>
     <div className='navdiv'>
@@ -65,13 +84,14 @@ export default function Navbar() {
             <Box>Logo</Box>
             <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
              
-                <NavLink to="/">
+                <Link to="/">
                   Home
-                </NavLink>
+                </Link>
 
-                <NavLink >
+
+                <Link >
                     Shop
-                </NavLink>
+                </Link>
 
       <div className="searchDiv">
 
@@ -84,8 +104,20 @@ export default function Navbar() {
             </HStack>
           </HStack>
           <Flex alignItems={'center'}>
-           
+           {
+              isAuth?
+             
+               <button onClick={handleLogout}>Logout</button>
+         :
+         <Link to="/login" >
+         Login
+        </Link>
+          
 
+           }
+
+
+             
           <Button onClick={toggleColorMode}>
                 {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
               </Button>
@@ -121,7 +153,9 @@ export default function Navbar() {
               size={'sm'}
               mr={4}
               leftIcon={<AddIcon />}>
-              Submit
+
+                <Link to="/addpost">Submit</Link>
+              
             </Button>
           </Flex>
         </Flex>

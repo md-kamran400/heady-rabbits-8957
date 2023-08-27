@@ -1,4 +1,4 @@
-import { DATA_REQUEST, DATA_SUCCESS, DATA_ERROR } from "./actionType";
+import { DATA_REQUEST, DATA_SUCCESS, DATA_ERROR, ADD_POST } from "./actionType";
 
 const initialState = {
   isLoading: false,
@@ -31,6 +31,12 @@ export const reducer = (state = initialState, { type, payload }) => {
         isLoading: false,
         isError: true,
       };
+    }
+
+    case ADD_POST:{
+      return{
+        ...state
+      }
     }
     default: {
       return state;

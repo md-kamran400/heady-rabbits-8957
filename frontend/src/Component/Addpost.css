@@ -1,0 +1,28 @@
+.postSection{
+    width: 100%;
+    padding: 100px 0;
+}
+
+.postform{
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 19px;
+    background-color: rgb(33, 32, 32);
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 20px;
+}
+.postform input {
+    padding: 5px;
+    border-radius: 5px;
+}
+.postSection button {
+    background-color: #51d7aa;
+    border-radius: 5px;
+    color: #363434;
+    font-weight: 500;
+    padding: 5px;
+}

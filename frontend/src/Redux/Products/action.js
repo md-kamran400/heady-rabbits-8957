@@ -1,4 +1,4 @@
-import { DATA_ERROR, DATA_SUCCESS, DATA_REQUEST } from "./actionType";
+import { DATA_ERROR, DATA_SUCCESS, DATA_REQUEST, ADD_POST } from "./actionType";
 import axios from "axios";
 
 export const getAllProducts = (page) => (dispatch) => {
@@ -13,3 +13,20 @@ export const getAllProducts = (page) => (dispatch) => {
       dispatch({ type: DATA_ERROR });
     });
 };
+
+
+export const addPost = (postData, headers) => (dispatch) => {
+  axios
+    .post('https://projectapi-by-anurag.onrender.com/posts/add', postData, { headers }) 
+    .then((response) => {
+      dispatch({ type: ADD_POST });
+      
+    })
+    .catch((error) => {
+      console.error('Error adding post:', error);
+      
+    });
+};
+
+
+

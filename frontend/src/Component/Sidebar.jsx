@@ -4,7 +4,7 @@ import React from 'react'
 import '@trendmicro/react-sidenav/dist/react-sidenav.css';
 import { AiFillHome, IconName } from "react-icons/ai";
 
-
+import "./Home.css"
 
 
 
@@ -20,7 +20,7 @@ export default function Sidebar() {
         // Add your code here
     }}
 >
-    <SideNav.Toggle style={{backgroundColor: "#131314"}} />
+    <SideNav.Toggle style={{backgroundColor: "#131314"}}     />
     <SideNav.Nav defaultSelected="home" style={{backgroundColor: "#06070d",height: "100vh"}}>
         <NavItem eventKey="home">
             <NavIcon>
