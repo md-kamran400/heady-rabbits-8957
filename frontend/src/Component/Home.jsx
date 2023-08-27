@@ -16,12 +16,13 @@ const dispatch=useDispatch()
 const post=useSelector((store) => store.singleData.Alldata);
 const isloading=useSelector((store)=>store.singleData.isLoading)
 const totalData=useSelector((store)=>store.singleData.Totaldata)
+const searchQuery = useSelector((store) => store.singleData.searchQuery);
 
 const totalPage=Math.ceil(totalData/9)
 
     useEffect(() => {
-        dispatch(getAllProducts(page));
-      }, [page]);
+        dispatch(getAllProducts(page,searchQuery));
+      }, [page,searchQuery]);
     
 
       

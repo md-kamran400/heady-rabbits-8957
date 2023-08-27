@@ -214,7 +214,7 @@ const Signup = () => {
 
     try {
       const response = await axios.post(
-        "https://projectapi-by-anurag.onrender.com/users/register",
+        "https://arthub-be.onrender.com/users/register",
         { username, email, password }
       );
       setSuccessMessage(response.data.msg);

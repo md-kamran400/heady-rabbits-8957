@@ -1,10 +1,12 @@
-import { DATA_REQUEST, DATA_SUCCESS, DATA_ERROR, ADD_POST } from "./actionType";
+// reducer.js
+import { DATA_REQUEST, DATA_SUCCESS, DATA_ERROR, ADD_POST, SET_SEARCH_QUERY } from './actionType';
 
 const initialState = {
   isLoading: false,
-  Alldata: [], 
+  Alldata: [],
   isError: false,
-  Totaldata:0
+  Totaldata: 0,
+  // searchQuery: '', // Initialize the searchQuery in the state
 };
 
 export const reducer = (state = initialState, { type, payload }) => {
@@ -22,7 +24,7 @@ export const reducer = (state = initialState, { type, payload }) => {
         isLoading: false,
         isError: false,
         Alldata: payload.post,
-        Totaldata:payload.total
+        Totaldata: payload.total,
       };
     }
     case DATA_ERROR: {
@@ -32,11 +34,16 @@ export const reducer = (state = initialState, { type, payload }) => {
         isError: true,
       };
     }
-
-    case ADD_POST:{
-      return{
-        ...state
-      }
+    // case SET_SEARCH_QUERY: {
+    //   return {
+    //     ...state,
+    //     searchQuery: payload,
+    //   };
+    // }
+    case ADD_POST: {
+      return {
+        ...state,
+      };
     }
     default: {
       return state;

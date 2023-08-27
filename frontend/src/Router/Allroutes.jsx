@@ -8,6 +8,7 @@ import AllProducts from '../components/AllProducts'
 import Login2 from '../Component/Login2'
 import AddPost from '../Component/AddPost'
 import PrivateRoute from './PrivateRoute'
+import Mypost from '../Component/Mypost'
 
 
 export default function Allroutes() {
@@ -24,6 +25,14 @@ export default function Allroutes() {
         <Route path='/addpost' element={
           <PrivateRoute>
                <AddPost/> 
+         </PrivateRoute>
+         }>
+
+      </Route>
+
+      <Route path='/userpost' element={
+          <PrivateRoute>
+               <Mypost/> 
          </PrivateRoute>
          }>
 

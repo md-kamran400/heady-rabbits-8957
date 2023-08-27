@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import {
   Box,
@@ -27,7 +27,8 @@ import { AiOutlineSearch } from 'react-icons/ai'
 import { useDispatch, useSelector } from 'react-redux'
 import axios from 'axios'
 import { LogoutAction } from '../Redux/Login/action'
-
+import { getAllProducts } from '../Redux/Products/action'
+import { FaUserAlt } from "react-icons/fa";
 
 
 const NavLink = (props) => {
@@ -51,7 +52,11 @@ const NavLink = (props) => {
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const { colorMode, toggleColorMode } = useColorMode()
+  const [searchQuery, setSearchQuery] = useState(''); //search
+
+
   const isAuth=useSelector((store)=>store.Loginreducer.isAuth)
+  const activeuser=useSelector((store)=>store.Loginreducer.username)
 
   const dispatch=useDispatch()
   const toast = useToast()
@@ -67,6 +72,17 @@ export default function Navbar() {
     })
   };
 
+
+  const handleSearchInput=(e)=>{
+    setSearchQuery(e.target.value);
+  }
+
+  const handleSearchSubmit = (e) => {
+    e.preventDefault();
+  
+    dispatch(getAllProducts(1, searchQuery));
+  };
+  
   console.log(isAuth);
   return (
     <>
@@ -92,13 +108,22 @@ export default function Navbar() {
                 <Link >
                     Shop
                 </Link>
-
+{/************* * search **************/}
       <div className="searchDiv">
 
-      <input type="text" name="" id="" placeholder='search' bg={useColorModeValue('gray.100', 'blackAlpha.800')}/>
-      <AiOutlineSearch className='searchIcon'/>
+      <form onSubmit={handleSearchSubmit}>
+      <input
+        type="text"
+        name=""
+        placeholder="search"
+        bg={useColorModeValue('gray.100', 'blackAlpha.800')}
+        value={searchQuery}
+        onChange={handleSearchInput}
+      />
+      <AiOutlineSearch className="searchIcon" />
+    </form>
       </div>
-            
+ {/************* * search-end **************/}      
 
 
             </HStack>
@@ -137,12 +162,26 @@ export default function Navbar() {
                   }
                 />
               </MenuButton>
-              <MenuList>
-                <MenuItem>Link 1</MenuItem>
-                <MenuItem>Link 2</MenuItem>
-                <MenuDivider />
-                <MenuItem>Link 3</MenuItem>
-              </MenuList>
+      {
+        isAuth ?
+        <MenuList>
+        <MenuItem>
+      <FaUserAlt/> <b style={{color:"#ffd915"}}>&nbsp;&nbsp; {activeuser}</b> 
+        
+        </MenuItem>
+        <MenuItem>
+        <Link to="/userpost">Posts</Link>
+      
+        </MenuItem>
+        <MenuDivider />
+        
+      </MenuList>
+      :
+      ""
+      }
+
+
+             
             </Menu>
 
 

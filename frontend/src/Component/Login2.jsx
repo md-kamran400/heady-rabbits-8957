@@ -13,12 +13,16 @@ const Login2 = () => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
- 
+
+  
   const navigate = useNavigate();
 const dispatch=useDispatch()
 const isLoading=useSelector((store)=>store.Loginreducer.isLoading)
 const isAuth=useSelector((store)=>store.Loginreducer.isAuth)
 const token=useSelector((store)=>store.Loginreducer.token)
+const error = useSelector((store) => store.Loginreducer.error);
+
+
 const toast = useToast()
 
 const handleLogint=(e)=>{
@@ -81,7 +85,7 @@ useEffect(() => {
             <button className="submit-button" type="submit">
             {isLoading ? "Logging In..." : "Login"}
             </button>
-          
+            {error && <p className="error-message">{error}</p>}
           </form>
          
         </div>
