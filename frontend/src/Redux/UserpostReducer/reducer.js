@@ -1,33 +1,34 @@
 // reducer.js
-import { DATA_REQUEST, DATA_SUCCESS, DATA_ERROR, ADD_POST, SET_SEARCH_QUERY, GET_USER_POST } from './actionType';
+
+import { GET_USER_POST_FAIL, GET_USER_POST_REQ, GET_USER_POST_SUCCESS } from "./actionType";
 
 const initialState = {
   isLoading: false,
-  Alldata: [],
+  AllUserpost: [],
   isError: false,
   Totaldata: 0,
-  // searchQuery: '', // Initialize the searchQuery in the state
+ 
 };
 
 export const reducer = (state = initialState, { type, payload }) => {
   switch (type) {
-    case DATA_REQUEST: {
+    case GET_USER_POST_REQ: {
       return {
         ...state,
         isLoading: true,
         isError: false,
       };
     }
-    case DATA_SUCCESS: {
+    case GET_USER_POST_SUCCESS: {
       return {
         ...state,
         isLoading: false,
         isError: false,
-        Alldata: payload.post,
-        Totaldata: payload.total,
+        AllUserpost: payload
+       
       };
     }
-    case DATA_ERROR: {
+    case GET_USER_POST_FAIL: {
       return {
         ...state,
         isLoading: false,
@@ -35,17 +36,12 @@ export const reducer = (state = initialState, { type, payload }) => {
       };
     }
     
-    // case SET_SEARCH_QUERY: {
+   
+    // case ADD_POST: {
     //   return {
     //     ...state,
-    //     searchQuery: payload,
     //   };
     // }
-    case ADD_POST: {
-      return {
-        ...state,
-      };
-    }
     default: {
       return state;
     }

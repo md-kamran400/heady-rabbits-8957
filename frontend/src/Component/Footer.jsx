@@ -1,5 +1,6 @@
 import React from 'react'
 import "./Footer.css"
+import { Heading } from '@chakra-ui/react'
 
 export default function Footer() {
   return (
@@ -8,7 +9,14 @@ export default function Footer() {
 
 
         <div className='footerdiv'>
-          <div>logo</div>
+          <div>
+          <Heading as='h4' size='md'>
+             <span style={{color:"#13b38b"}}> ART</span>HUB
+            </Heading>
+         <p className='fAbout'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took 
+        a galley of type and scrambled it to make a type specimen book.</p>
+          </div>
 
 
             <div>
@@ -37,13 +45,7 @@ export default function Footer() {
                   <li>Help and FAQ</li>
                </ul>
                </div>
-            <div>
-            Watch the official AH Team profile for news, 
-            product releases, and devious activities:
-
-
-
-            </div>
+            
 
    
 

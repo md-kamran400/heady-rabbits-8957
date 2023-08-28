@@ -199,6 +199,7 @@ import React, { useState } from "react";
 import axios from "axios";
 
 import "../Signup.css"; // Import your CSS file for styling
+import { Link } from "react-router-dom";
 
 const Signup = () => {
   const [username, setUserName] = useState("");
@@ -276,6 +277,9 @@ const Signup = () => {
           </button>
           {error && <p className="error-text">{error}</p>}
           {successMessage && <p className="success-text">{successMessage}</p>}
+
+          <p style={{color:"#06264a",fontWeight:"700"}}>Already  Registered? <Link to="/login">Login</Link></p>
+
         </form>
       </div>
     </div>

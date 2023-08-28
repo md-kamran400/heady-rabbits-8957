@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
  import "../Login.css";
@@ -35,6 +35,7 @@ const handleLogint=(e)=>{
   dispatch(LoginAction(user))
  
 }
+
 
 console.log(isAuth);
 useEffect(() => {
@@ -86,6 +87,8 @@ useEffect(() => {
             {isLoading ? "Logging In..." : "Login"}
             </button>
             {error && <p className="error-message">{error}</p>}
+                <p style={{color:"#06264a",fontWeight:"700"}}>Not Registered? <Link to="/signup">Sign Up here</Link></p>
+
           </form>
          
         </div>

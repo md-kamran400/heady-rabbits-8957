@@ -19,7 +19,7 @@ export const getAllProducts = (page, searchQuery) => (dispatch) => {
 
 export const addPost = (postData, headers) => (dispatch) => {
   axios
-    .post('https://projectapi-by-anurag.onrender.com/posts/add', postData, { headers }) 
+    .post('https://arthub-be.onrender.com/posts/add', postData, { headers }) 
     .then((response) => {
       dispatch({ type: ADD_POST });
       

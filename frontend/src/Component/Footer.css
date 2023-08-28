@@ -10,12 +10,14 @@
 
     padding: 40px 20px;
  display: grid;
-grid-template-columns: repeat(5,1fr);
+grid-template-columns: repeat(4,1fr);
 /* background-color: rgb(17, 16, 16); */
 background: rgb(1,13,23);
 background: linear-gradient(0deg, rgba(1,13,23,1) 0%, rgba(1,1,4,1) 0%, rgba(0,0,0,1) 0%, rgba(52,56,56,1) 100%);
 }
-
+.footerdiv div {
+   text-align: justify;
+ }
 .footerdiv div ul{
    list-style-type: none;
    text-align: left;
@@ -30,4 +32,8 @@ background: linear-gradient(0deg, rgba(1,13,23,1) 0%, rgba(1,1,4,1) 0%, rgba(0,0
     grid-template-columns: repeat(5, 1fr);
     
 
+}
+
+.fAbout{
+  padding:10px 20px;
 }

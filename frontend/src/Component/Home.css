@@ -85,15 +85,12 @@ gap: 10px;
     /* padding: 16px 32px; */
 }
 
-.sidenav---sidenav--- {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1006;
-  min-width: 64px;
-  background: #886d6e;
-  transition: min-width 0.2s;
+
+
+
+.alldatasec{
+  width: 96%;
+  /* padding: 40px 20px; */
+
+float: right;
 }
-
-

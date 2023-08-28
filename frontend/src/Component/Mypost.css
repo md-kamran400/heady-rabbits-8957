@@ -1,0 +1,17 @@
+.UserpostSection{
+    width: 96%;
+    padding: 40px 20px;
+ display: grid;
+float: right;
+grid-template-columns: repeat(3,1fr);
+
+
+/* column-count: 3; */
+gap: 10px;
+}
+
+.UserpostSection div img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}

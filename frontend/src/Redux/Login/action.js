@@ -7,7 +7,13 @@ export const LoginAction = (user) => (dispatch) => {
   axios
     .post(`https://arthub-be.onrender.com/users/login`, user)
     .then((res) => {
+      // const token = res.data.token;
+      // console.log(token);
+      // localStorage.setItem("token", token);
       dispatch({ type: LOGIN_REQUEST_SUCCESS, payload: res.data });
+     
+    
+
     })
     .catch((error) => {
       dispatch({ type: LOGIN_REQUEST_FAILURE, payload: "Invalid credentials" });

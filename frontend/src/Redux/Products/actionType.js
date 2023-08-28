@@ -5,3 +5,4 @@ export const DATA_ERROR = "DATA_ERROR";
 export const ADD_POST="ADD_POST"  
 
 export const SET_SEARCH_QUERY = 'SET_SEARCH_QUERY';
+

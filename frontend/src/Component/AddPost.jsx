@@ -34,7 +34,7 @@ export default function AddPost() {
         e.preventDefault();
         const currentDate = new Date(); 
         postData.date = currentDate.toISOString();
-
+        
         const headers = {
           Authorization: `Bearer ${token}`, 
         };

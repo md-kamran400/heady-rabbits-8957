@@ -18,6 +18,7 @@ import {
   Stack,
   useColorMode,
   useToast,
+  Heading,
   
 } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon, AddIcon,MoonIcon, SunIcon } from '@chakra-ui/icons'
@@ -97,7 +98,13 @@ export default function Navbar() {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={'center'}>
-            <Box>Logo</Box>
+            <Box>
+            <Heading as='h4' size='md'>
+             <span style={{color:"#13b38b"}}> ART</span>HUB
+            </Heading>
+
+
+            </Box>
             <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
              
                 <Link to="/">
@@ -105,7 +112,7 @@ export default function Navbar() {
                 </Link>
 
 
-                <Link >
+                <Link to="/product" >
                     Shop
                 </Link>
 {/************* * search **************/}

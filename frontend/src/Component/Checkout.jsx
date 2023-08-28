@@ -1,14 +1,20 @@
 import { Box, Button, Heading, Image, Input, Text } from "@chakra-ui/react"
+import { useNavigate } from "react-router-dom"
 
 
 
 export const Checkout = () => {
+    const navigate=useNavigate()
 
+    const handlecheckout=()=>{
+        alert("ordered placed")
+        navigate("/")
+    }
 
     return (
-        <Box bg={'blackAlpha.900'} pb={'1cm'}>
+        <Box  pb={'1cm'}>
             <Heading color={'whiteAlpha.900'}>CHECKOUT</Heading>
-            <Box bg={'white'} w={'70%'} minH={'70vh'} m={'0.5cm auto 0 auto'} display={'flex'} justifyContent={'space-between'} borderRadius={'10px'} p={'10px'}>
+            <Box bg={'blackAlpha.300'} w={'70%'} minH={'70vh'} m={'0.5cm auto 0 auto'} display={'flex'} justifyContent={'space-between'} borderRadius={'10px'} p={'10px'}>
                 <Box w={'60%'} p={'10px'}>
                     <Text m={'15px 15px 5px 15px'} textAlign={'left'} fontWeight={'bold'} color={'grey'}>CHOOSE PAYMENT METHOD</Text>
                     <Box display={'flex'} justifyContent={'space-between'}>
@@ -40,7 +46,7 @@ export const Checkout = () => {
                         <Box w={'40%'}>
                             <Text m={'15px 15px 5px 15px'} textAlign={'left'} fontWeight={'bold'} color={'grey'}>Expiration Date</Text>
                             <Box display={'flex'} gap={'7px'}>
-                                <Input border={'1px solid #E0E0E0'} type="number" placeholder={'MM'} />
+                                <Input border={'1px solid #E0E0E0'} type="number" placeholder={'MM'}/>
 
                                 <Input border={'1px solid #E0E0E0'} type="number" placeholder={'YY'} />
                             </Box>
@@ -107,7 +113,7 @@ export const Checkout = () => {
                     <Text fontSize={'15px'}>$1.25 USD</Text>
                     </Box>
 
-                    <Button mt={'0.5cm'} w={'100%'} h={'60px'} bg={'blue.400'} color={'whiteAlpha.900'}>Pay</Button>
+                    <Button mt={'0.5cm'} w={'100%'} h={'60px'} bg={'blue.400'} color={'whiteAlpha.900'} onClick={handlecheckout}>Pay</Button>
                 </Box>
             </Box>
         </Box>

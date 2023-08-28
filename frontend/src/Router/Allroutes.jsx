@@ -16,7 +16,7 @@ export default function Allroutes() {
     <div>
     <Routes>
         <Route path="/" element={<Home/>  }/>
-        <Route path='/Checkout' element={<Checkout/>}></Route>
+        <Route path='/checkout' element={<Checkout/>}></Route>
         {/* <Route path='/login' element={<Login/>}></Route> */}
         <Route path='/signup' element={<Signup/>   }></Route>
         <Route path='/allproduct' element={<AllProducts/>   }></Route>
@@ -33,6 +33,14 @@ export default function Allroutes() {
       <Route path='/userpost' element={
           <PrivateRoute>
                <Mypost/> 
+         </PrivateRoute>
+         }>
+
+      </Route>
+
+      <Route path='/product' element={
+          <PrivateRoute>
+               <AllProducts/>
          </PrivateRoute>
          }>
 
