@@ -1,5 +1,5 @@
 
-# ART HUB
+# ARTHUB
 
 
 Experience the world of art like never before with ARTHUB, your ultimate online destination for creative inspiration. Discover an array of captivating art forms, from intricate vector art to mesmerizing digital creations, all thoughtfully curated to cater to every artistic taste.
@@ -10,7 +10,7 @@ Whether you're an appreciator or a creator, ARTHUB provides an immersive space t
 
 
 ## Deployed Link
-[Deployed Link:  ART HUB]()
+[Deployed Link:  ARTHUB]()
 
 
 
